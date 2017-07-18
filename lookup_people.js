@@ -12,6 +12,13 @@ const client = new pg.Client({
   ssl      : settings.ssl
 });
 
+function rowReturn (result) {
+  console.log('Searching...');
+  for (let i = result.rowCount; i > 0; i--){
+    console.log(result.rows[i])
+  }
+}
+
 client.connect((err) => {
   if (err) {
     return console.error("Connection Error", err);
@@ -20,8 +27,8 @@ client.connect((err) => {
     if (err) {
       return console.error("error running query", err);
     }
-    console.log('Searching...');
-    console.log(result.rows[0]);
+    rowReturn(result);
+    // console.log(result.rows[0]);
     client.end();
   });
 });
