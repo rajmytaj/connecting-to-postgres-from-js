@@ -11,14 +11,6 @@ const knex = require('knex')({
   }
 });
 
-// const reformatResults = function (resultsRow) {
-//   resultsRow.forEach((item, index) => {
-//     let firstName = item.first_name;
-//     let lastName = item.last_name;
-//     let birthDate = item.birthdate.toString().substring(0,15);
-//     console.log(`- ${index +1}: ${firstName} ${lastName}, born '${birthDate}'`);
-//   });
-// }
 console.log(myArgs);
 console.log("rohit ", myArgs[2]);
 
