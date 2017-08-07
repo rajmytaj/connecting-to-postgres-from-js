@@ -12,7 +12,7 @@ const knex = require('knex')({
 });
 
 console.log(myArgs);
-console.log("rohit ", myArgs[2]);
+// console.log("rohit ", myArgs[2]);
 
 knex('famous_people').insert({first_name: myArgs[0], last_name: myArgs[1], birthdate: myArgs[2]})
 .asCallback(function(err, rows) {
